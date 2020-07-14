@@ -1,26 +1,65 @@
 body {
     box-sizing: border-box; 
     background-color: silver;
-}
-.france {
-    position: fixed;
     font-size: 0px;
 }
-.box {
+.france {
+    font-size: 0px;
+    border-spacing: 100px;
+}
+.boxA {
     width: 100px;
     height: 300px;
     padding: 25px;
     display: inline-block;
 }
-.blue {
+.franceBlue {
     background-color: royalblue;
     border: black;
 }
-.white {
+.franceWhite {
     background-color: white;
     border: black;
 }
-.red {
+.franceRed {
     background-color: red;
     border: black;
+}
+
+.japan {
+    position: relative;
+    background-color: white;
+    height: 300px;
+    width: 500px;
+}
+
+.japanRed {
+    border-radius: 50%;
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    background-color: red;
+    left: 33%;
+    top: 28%;
+}
+.germany {
+    font-size: 0px;
+    border-spacing: 100px;
+}
+.boxB {
+    width: 400px;
+    height: 40px;
+    padding: 25px;
+    display: block;
+}
+.germanyBlack {
+    background-color: black;
+    border-color: black;
+}
+.germanyRed {
+    background-color: red;
+}
+.germanyYellow {
+    background-color: yellow;
+    border-color: black;
 }
