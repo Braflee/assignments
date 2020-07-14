@@ -1,5 +1,26 @@
-.blue {
-    height: 200px;
+body {
+    box-sizing: border-box; 
+    background-color: silver;
+}
+.france {
+    position: fixed;
+    font-size: 0px;
+}
+.box {
     width: 100px;
-    margin: 0px;
+    height: 300px;
+    padding: 25px;
+    display: inline-block;
+}
+.blue {
+    background-color: royalblue;
+    border: black;
+}
+.white {
+    background-color: white;
+    border: black;
+}
+.red {
+    background-color: red;
+    border: black;
 }
