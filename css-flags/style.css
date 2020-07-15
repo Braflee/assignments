@@ -10,6 +10,7 @@ body {
 .boxA {
     width: 100px;
     height: 300px;
+    margin-bottom: 50px;
     padding: 25px;
     display: inline-block;
 }
@@ -48,8 +49,8 @@ body {
 }
 .boxB {
     width: 400px;
-    height: 40px;
-    padding: 25px;
+    height: 50px;
+    padding-bottom: 25px;
     display: block;
 }
 .germanyBlack {
@@ -62,4 +63,5 @@ body {
 .germanyYellow {
     background-color: yellow;
     border-color: black;
+    margin-bottom: 50px;
 }
