@@ -1,0 +1,14 @@
+* {
+    margin: 2.5px;
+    padding: 2.5px;
+}
+body {
+    background-image: url(https://wallpaperplay.com/walls/full/f/8/d/7197.jpg);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position-x: center;
+}
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    color: yellowgreen;
+}
