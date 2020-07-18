@@ -1,14 +1,56 @@
 * {
-    margin: 2.5px;
-    padding: 2.5px;
+  margin: 2.5px;
+  padding: 2.5px;
 }
 body {
-    background-image: url(https://wallpaperplay.com/walls/full/f/8/d/7197.jpg);
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position-x: center;
+  background-image: url(https://wallpaperplay.com/walls/full/f/8/d/7197.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position-x: center;
+  font-family: "Courier New", Courier, monospace;
+  color: yellowgreen;
+  text-align: center;
 }
-h1 {
-    font-family: 'Courier New', Courier, monospace;
-    color: yellowgreen;
+header {
+  font-family: "Courier New", Courier, monospace;
+  color: yellowgreen;
+  text-align: center;
+}
+#bannerBox {
+  display: flex;
+  border: solid 2px;
+  background-color: #302244;
+  border: 5px solid transparent;
+  border-image: linear-gradient(
+    to bottom right,
+    #b827fc 0%,
+    #2c90fc 25%,
+    #b8fd33 50%,
+    #fec837 75%,
+    #fd1892 100%
+  );
+  border-image-slice: 1;
+  flex-direction: row;
+  justify-content: space-around;
+}
+button {
+  text-decoration: none;
+}
+#playstation {
+  background-color: #665cbe;
+  color: black;
+  font-family: monospace;
+  border-radius: 12px;
+}
+#xBox {
+  background-color: #107c10;
+  color: black;
+  font-family: monospace;
+  border-radius: 12px;
+}
+#pc {
+  background-color: #66c0f4;
+  color: black;
+  font-family: monospace;
+  border-radius: 12px;
 }
