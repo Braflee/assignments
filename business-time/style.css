@@ -1,6 +1,7 @@
 * {
-  margin: 2.5px;
-  padding: 2.5px;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 body {
   background-image: url(https://wallpaperplay.com/walls/full/f/8/d/7197.jpg);
@@ -9,7 +10,6 @@ body {
   background-position-x: center;
   font-family: "Courier New", Courier, monospace;
   color: yellowgreen;
-  text-align: center;
 }
 header {
   font-family: "Courier New", Courier, monospace;
@@ -18,7 +18,7 @@ header {
 }
 #bannerBox {
   display: flex;
-  border: solid 2px;
+  border: solid 5px;
   background-color: #302244;
   border: 5px solid transparent;
   border-image: linear-gradient(
@@ -32,6 +32,8 @@ header {
   border-image-slice: 1;
   flex-direction: row;
   justify-content: space-around;
+  padding: 10px;
+  margin: 10px;
 }
 button {
   text-decoration: none;
@@ -53,4 +55,92 @@ button {
   color: black;
   font-family: monospace;
   border-radius: 12px;
+}
+p { 
+  border: 5px solid transparent;
+  border-image: linear-gradient(
+    to bottom right,
+    #b827fc 0%,
+    #2c90fc 25%,
+    #b8fd33 50%,
+    #fec837 75%,
+    #fd1892 100%);
+  border-image-slice: 1;
+  background-color: #302244;
+  opacity: 0.5;
+  height: auto;
+  width: auto;
+  padding: 10px;
+  margin: 10px;
+
+}
+#bodyBox {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+span {
+  border: 5px solid transparent;
+  border-image: linear-gradient(
+    to bottom right,
+    #b827fc 0%,
+    #2c90fc 25%,
+    #b8fd33 50%,
+    #fec837 75%,
+    #fd1892 100%);
+  border-image-slice: 1;
+  background-color: #302244;
+  opacity: 0.5;
+  height: auto;
+  width: auto;
+  padding: 20px;
+  margin: 10px;
+
+}
+#imgTwo {
+  border: 5px solid transparent;
+  border-image: linear-gradient(
+    to bottom right,
+    #b827fc 0%,
+    #2c90fc 25%,
+    #b8fd33 50%,
+    #fec837 75%,
+    #fd1892 100%);
+  border-image-slice: 1;
+  width: 60%;
+  object-fit: contain;  
+}
+#imageThree {
+  object-fit: contain;
+}
+#trollButton {
+  background-color: #665cbe;
+  color: black;
+  font-family: monospace;
+  border-radius: 12px;
+  padding: 10px;
+  margin: 10px;
+}
+#trollBox {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#imageCont{
+  display: flex;
+  width: 100%;
+  position: relative;
+  padding: 20px;
+
+}
+
+@media only screen and (max-width: 600px) {
+  #imageCont {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
 }
