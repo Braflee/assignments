@@ -109,7 +109,8 @@ span {
     #fd1892 100%);
   border-image-slice: 1;
   width: 60%;
-  object-fit: contain;  
+  object-fit: contain;
+  opacity: 0.5;  
 }
 #imageThree {
   object-fit: contain;

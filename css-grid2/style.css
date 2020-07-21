@@ -1,0 +1,45 @@
+body {
+    font-size: 0;
+}
+#gridContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 200px;
+    width: 200px;
+}
+#grid1 {
+    background-color: darkblue;
+    grid-column: 1 / 4 ;
+    grid-row: 1 / 2;
+    margin: 2px;
+    border-radius: 4px;
+}
+#grid2 {
+    background-color: salmon;
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    margin: 2px;
+    border-radius: 4px;
+}
+#grid3 {
+    background-color: chartreuse;
+    grid-column: 2/4;
+    grid-row: 2/3;
+    margin: 2px;
+    border-radius: 4px;
+}
+#grid4 {
+    background-color: slateblue;
+    grid-column: 2/3;
+    grid-row: 3/4;
+    margin: 2px;
+    border-radius: 4px;
+}
+#grid5 {
+    background-color: slateblue;
+    grid-column: 3/4;
+    grid-row: 3/4;
+    margin: 2px;
+    border-radius: 4px;
+}

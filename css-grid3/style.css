@@ -1,0 +1,202 @@
+#gridDaddy {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+header {
+    background-color: darkgoldenrod;
+    margin: 2px;
+    border-radius: 4px;
+    padding: 2px;
+}
+
+#sidebar {
+    background-color: lavender;
+    margin: 2px;
+    border-radius: 4px;
+    padding: 2px;
+}
+
+#content {
+    background-color: blueviolet;
+    margin: 2px;
+    border-radius: 4px;
+    padding: 2px;
+}
+
+#sidebar2 {
+    background-color: steelblue;
+    margin: 2px;
+    border-radius: 4px;
+    padding: 2px;
+}
+
+footer {
+    background-color: brown;
+    margin: 2px;
+    border-radius: 4px;
+    padding: 2px;
+}
+
+@media only screen and (max-width: 300px ) {
+    #gridDaddy {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        height: 200px;
+        width: 100%;
+    }
+    
+    header {
+        background-color: darkgoldenrod;
+        margin: 2px;
+        border-radius: 4px;
+        padding: 2px;
+        grid-column: 1/4;
+        grid-row: 1/2;
+    }
+    
+    #sidebar {
+        background-color: lavender;
+        margin: 2px;
+        border-radius: 4px;
+        padding: 2px;
+        grid-column: 1/4;
+        grid-row: 2/3;
+    }
+    
+    #content {
+        background-color: blueviolet;
+        margin: 2px;
+        border-radius: 4px;
+        padding: 2px;
+        grid-column: 1/4;
+        grid-row: 3/4;
+    }
+    
+    #sidebar2 {
+        background-color: steelblue;
+        margin: 2px;
+        border-radius: 4px;
+        padding: 2px;
+        grid-column: 1/4;
+        grid-row: 4/5;
+    }
+    
+    footer {
+        background-color: brown;
+        margin: 2px;
+        border-radius: 4px;
+        padding: 2px;
+        grid-column: 1/4;
+        grid-row: 5/6;
+    }
+}
+
+@media (min-width: 300px) and (max-width:768px) {
+    #gridDaddy {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+    
+    header {
+        background-color: darkgoldenrod;
+        margin: 2px;
+        border-radius: 4px;
+        padding: 2px;
+        grid-column: 1/5;
+        grid-row: 1/2;
+    }
+    
+    #sidebar {
+        background-color: lavender;
+        margin: 2px;
+        border-radius: 4px;
+        padding: 2px;
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    
+    #content {
+        background-color: blueviolet;
+        margin: 2px;
+        border-radius: 4px;
+        padding: 2px;
+        grid-column: 2/5;
+        grid-row: 2/3;
+    }
+    
+    #sidebar2 {
+        background-color: steelblue;
+        margin: 2px;
+        border-radius: 4px;
+        padding: 2px;
+        grid-column: 1/5;
+        grid-row: 3/4;
+    }
+    
+    footer {
+        background-color: brown;
+        margin: 2px;
+        border-radius: 4px;
+        padding: 2px;
+        grid-column: 1/5;
+        grid-row: 4/5;
+    }
+}
+@media only screen and (max-width:1024px) {
+    #gridDaddy {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+    
+    header {
+        background-color: darkgoldenrod;
+        margin: 2px;
+        border-radius: 4px;
+        padding: 2px;
+        grid-column: 1/5;
+        grid-row: 1/2;
+    }
+    
+    #sidebar {
+        background-color: lavender;
+        margin: 2px;
+        border-radius: 4px;
+        padding: 2px;
+        grid-column: 1/2;
+        grid-row: 2/4;
+    }
+    
+    #content {
+        background-color: blueviolet;
+        margin: 2px;
+        border-radius: 4px;
+        padding: 2px;
+        grid-column: 2/4;
+        grid-row: 2/4;
+    }
+    
+    #sidebar2 {
+        background-color: steelblue;
+        margin: 2px;
+        border-radius: 4px;
+        padding: 2px;
+        grid-column: 4/5;
+        grid-row: 2/4;
+    }
+    
+    footer {
+        background-color: brown;
+        margin: 2px;
+        border-radius: 4px;
+        padding: 2px;
+        grid-column: 1/5;
+        grid-row: 4/5;
+    }
+}
+
+
