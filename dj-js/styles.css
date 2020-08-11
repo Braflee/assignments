@@ -1,0 +1,22 @@
+header {
+    font-size: large;
+    font-family: monospace;
+    text-align: center;
+}
+
+body {
+    background-color: slategrey;
+}
+
+#box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #theButton {
+    width: 100px;
+    height: 100px;
+    margin-top: 50px;
+    background-color: whitesmoke;
+  }
