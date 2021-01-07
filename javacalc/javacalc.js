@@ -1,11 +1,11 @@
-const readlineSync = require("readline-sync");
+import { question, keyInSelect } from "readline-sync";
 
-const num1 = readlineSync.question("Please enter your first number: ");
+const num1 = question("Please enter your first number: ");
 
-const num2 = readlineSync.question("Please enter your second number: ");
+const num2 = question("Please enter your second number: ");
 
 const operation = ["add", "sub", "mul", "div"];
-const index = readlineSync.keyInSelect(
+const index = keyInSelect(
   operation,
   "Please choose an operation to perform"
 );
