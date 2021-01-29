@@ -1,15 +1,14 @@
 const readlineSync = require('readline-sync');
 let notDead = true;
-//let escaped = true;
 
-const username = readlineSync.question('You made it! Welcome to The Forest of Slaps. What is your name, brave one?: ');
-console.log('Welcome to the jungle, ' + username + '...');
+const username = readlineSync.question('You made it! Welcome to The Forest of Lunafreya. What is your name, brave one?: ');
+console.log('Welcome to the gauntlet, ' + username + '...');
 class Protagonist {
     constructor(player, hp, ap) {
         this.player = player
         this.hp = hp
         this.ap = ap
-        this.satchel = ['Red Bull']
+        this.satchel = ['Hi-Potion']
     }
 }
 const player = new Protagonist(username, 100, 100)
@@ -28,7 +27,7 @@ const evilTwin = new Mob("Evil Twin", 100, 100);
 const enemies = [tonberry, cactaur, flan, evilTwin];
 
 while (notDead) {
-    const controls = readlineSync.keyIn('Walk [w], Check your satchel [i], or Quit [q]? ', {limit: 'wiq'});
+    const controls = readlineSync.keyIn('Walk [w], Check your satchel [i], or Quit [q]? ', { limit: 'wiq' });
     if (controls === 'w') {
         walking()
     } else if (controls === 'i') {
@@ -52,34 +51,36 @@ function openSatchel() {
     console.log(player.satchel);
 }
 
-function enemyAppears() {
-        const random = enemies[Math.floor(Math.random() * enemies.length)];
-        fightLoop(random)
 
-    };
-function fightLoop(enemy) {
+
+function enemyAppears() {
+    fightLoop();
+};
+function fightLoop() {
+    const random = enemies[Math.floor(Math.random() * enemies.length)];
     // do a loop here until enemy hp or player hp is 0 or less, or if they get away
-    //HOW DO I REFER TO THE ENEMY AT THIS POINT?
-    while (player.hp <= 0){
-        notDead = false;
-    }
-    while (random.hp <= 0){}
-        const fightMode = readlineSync.keyIn('Think fast! The ' + random +  ' has shown its ugly face! [r]RUN , [s]Slap that mofo! , or [q]quit??? ', {limit: 'srq'});
+    while (player.hp > 0 && random.hp > 0) {
+        // optionally ask if the player wants to hit, use item, or run, etc...
+        const fightControls = readlineSync.keyIn('Think fast! The ' + random.enemy + ' has shown its ugly face! [r]RUN , [s]Attack!!! , or [q]quit??? ', { limit: 'srq' });
+
         const oddOfEscape = Math.random()
-        if(fightMode === 'r'){
-            if(oddOfEscape > .5){
+
+        if (fightControls === 'r') {
+            if (oddOfEscape > .5) {
                 console.log('You have escaped!')
             } else {
                 enemyAttack()
             }
-        } else if(fightMode === 's'){
-            playerAttack()
-        } else if(fightMode === 'q'){
+        } else if (fightControls === 's') {
+            playerAttack(random);
+            enemyAttack();
+        } else if (fightControls === 'q') {
             notDead = false;
             console.log('Okay, bye I guess...')
+            break;
         }
-    }
-    // optionally ask if the player wants to hit, use item, or run, etc...
+
+    };
     // if hit
     // if the player gets hit, subtract his hp
     // if the enemy gets hit, subtract its hp
@@ -91,14 +92,13 @@ function fightLoop(enemy) {
     // repeat until once character has hp of 0 or less
     // Once out of the loop, if the character succeeded, you can check if the enemy had an item
     // if enemy had item, add it to player inventory
-    }
-    function enemyAttack(){
-        player.push(player.hp - Math.random(Math.floor() * 3))
-        return player.hp;
-    }
-    function playerAttack(){
-        random.push(random.hp - Math.random(Math.floor() * 3))
-        return random.hp;
-    }
-
+}
+function enemyAttack(random) {
+    player.hp -= Math.floor(Math.random() * random.ap)
+    console.log(player.hp);
+}
+function playerAttack(random) {
+    random.hp -= Math.floor(Math.random() * player.ap)
+    console.log(random.hp);
+}
 
