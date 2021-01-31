@@ -126,8 +126,7 @@ function fightLoop(spawn) {
 
     }
     if (player.hp == 0) {
-        console.log('You died!');
-        //look up cool node/js graphic
+        console.log('*WASTED*... That means you died. get gud scrub.*air horns* *sunglasses*');
     } else if (spawn.hp == 0) {
         enemyDeath(spawn);
         console.log(spawn.enemy + ' is dead. You recovered 100 HP.');
