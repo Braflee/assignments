@@ -67,8 +67,13 @@ while (player.isAlive()) {
     } else if (controls === 'u') {
         useItem(remedy)
     } else if (controls === 'q') {
-        console.log("Phil: Thank you SO much for your help, my friend! I'll be in touch with your superiors to let them know how STELLAR of a job you did! Go take a nap, you've earned it... Buddy.")
-        break;
+        if(enemies.length > 0){
+            console.log("Phil: Way to leave me hangin' jerk.");
+            break;
+        }else{
+            console.log("Phil: Thank you SO much for your help, my friend! I'll be in touch with your superiors to let them know how STELLAR of a job you did! Go take a nap, you've earned it... Buddy.")
+            break;
+        }
     }
 }
 
