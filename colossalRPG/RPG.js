@@ -2,6 +2,7 @@ const readlineSync = require('readline-sync');
 const username = readlineSync.question("Phil: Thank goodness you're finally here! I'm Phil the building manager, I called for your services hours ago! My building's infested with quite a few different monsters and I need them out. Like yesterday. Regardless, I hear Monster Slayers Inc. only hires the best of the best so I'm glad you're here. By the way, I didn't quite catch your name..?  ");
 console.log("Phil: Well, " + username + " I will NOT keep you any longer, I'll let you get to work. I'll be watching the security feed from my phone out here while maintaining constant communcation, so once I see you deal with the last baddy you can be on your way!  ");
 console.log('*Enter the building*')
+
 class Protagonist {
     constructor(player, hp, ap) {
         this.player = player
@@ -56,7 +57,7 @@ const flan = new Mob("Flan", 25, 25);
 const evilTwin = new Mob("Evil Twin", 100, 100);
 let enemies = [tonberry, cactaur, flan, evilTwin];
 
-
+//player.items.push(...tonberry.splice(2,1))
 
 while (player.isAlive()) {
     const controls = readlineSync.keyIn('[w] Walk\n[p] Player Status\n[u] Use remedy\n[q]Quit\n', { limit: 'wpuq' });

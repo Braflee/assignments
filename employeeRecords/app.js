@@ -7,18 +7,23 @@ function Employee(name, job, salary){
     this.status = "Full Time"
 }
 
-Employee.prototype.printEmployeeForm = function(){
-    console.log(this.name + this.job + this.salary + this.status)
+// Employee.prototype.printEmployeeForm = function(){
+//     console.log(this.name + this.job + this.salary + this.status)
+// }
+const printEmployeeForm = employees => {
+    console.log(gosh);
+    console.log(brad);
+    console.log(granny);
 }
 
-let Gosh = new Employee("Gosh", "Darning things", "4 newts/day")
-Gosh.status = "Contract"
-employees.push(Gosh)
-let Brad = new Employee("Brad", "Student", "Air")
-employees.push(Brad)
-let Granny = new Employee("Granny", "Baking Cookies", "1 Hug/hr")
-employees.push(Granny)
+let gosh = new Employee("Gosh", "Darning things", "4 newts/day");
+gosh.status = "Contract";
+employees.push(gosh);
+let brad = new Employee("Brad", "Student", "Air");
+employees.push(brad);
+let granny = new Employee("Granny", "Baking Cookies", "1 Hug/hr");
+employees.push(granny);
 
-employees[0].printEmployeeForm()
+return printEmployeeForm()
 
 
