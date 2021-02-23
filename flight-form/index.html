@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="travelForm">
+        Please enter your information as follows:
+        <div><input type="text" name="firstName" placeholder="First Name" value="" required ></div>
+        <div><input type="text" name="lastName" placeholder="Last Name" value="" required></div>
+        <div><input type="number" name="age" placeholder="Age" value="" required></div>
+        <div>Gender:</div>
+        <div>Male:<input type="radio" name="gender" value="Male"></div>
+        <div>Female:<input type="radio" name="gender" value="Female"></div>
+        <div>Lizard:<input type="radio" name="gender" value="Lizard"></div>
+        <div>Destination:
+            <select name="city">
+                <option value="San Fransokyo">San Fransokyo</option>
+                <option value="Spokane">Spokane</option>
+                <option value="Houston">Houston</option>
+            </select>
+        </div>
+        
+        <div>Dietary Restrictions: 
+            <select name="diet">
+                <option value="None">None</option>
+                <option value="Vegan">Vegan</option>
+                <option value="Paleo">Paleo</option>
+            </select>
+        </div>
+        <div><button name="submitBtn">Submit</button></div>
+    </form>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
