@@ -1,0 +1,22 @@
+body{
+    background-image: url(https://img5.goodfon.com/wallpaper/nbig/5/7f/minimalizm-igra-stil-mario-fon-art-mario-super-mario-griby.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /*background-position: center;*/
+    background-size: cover;
+}
+.goombaImg{
+    display: flex;
+    height: 100px;
+    width: 100px;
+}
+.bobombImg{
+    display: flex;
+    height: 100px;
+    width: 100px;
+}
+.cheepImg{
+    display: flex;
+    height: 100px;
+    width: 100px;
+}

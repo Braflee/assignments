@@ -5,11 +5,6 @@ form.addEventListener('submit', (event) => {
 
     const checkedinputs = [];
 
-    // for(let i = 0; i < form.city.length; i++){
-    //     if(form.city[i].checked){
-    //         checkedinputs.push(form.city[i].value)
-    //     }
-    // }
     if (form.city.checked) {
         checkedinputs.push(form.city.value)
     }
