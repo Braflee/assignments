@@ -48,9 +48,11 @@
     margin: 25px; 
     padding: 25px;     
     background-color: lawngreen;
+    transition: background-color 1s, opacity 1s;
 }
 #box4:hover {
     background-color: darkblue;
+    opacity: 50%;
 }
 
 #box5 {
@@ -60,9 +62,11 @@
     margin: 25px; 
     padding: 25px;    
     background-color: brown;
+    transition: all 1s;
 }
 #box5:hover {
     background-color: fuchsia;
+    border: solid rebeccapurple 25px;
 }
 
 #box6 {
@@ -72,7 +76,12 @@
     margin: 25px; 
     padding: 25px;   
     background-color: darkmagenta;
+    transition: all 1s;
 }
 #box6:hover {
-    background-color: indigo;
+    display: block;
+    width: 126px;
+    height: 180px;
+    background-color: red;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
 }

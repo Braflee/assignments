@@ -1,0 +1,83 @@
+@import url(http://fonts.googleapis.com/css?family=Julius+Sans+One|Libre+Baskerville:400,400italic);
+
+body {
+  color: #325050;
+  background:transparent #fff;
+  background-image: floating url(http://www.csszengarden.com/214/bamboo.png);
+  font-family: 'Libre Baskerville', sans-serif;
+  font-size: 70%;
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: repeat(11, 1fr);
+    grid-template-columns: repeat(9, 1fr);
+    height: auto;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+#cell1 {
+    background:  50% 0 url(http://www.csszengarden.com/214/huntington.jpg) no-repeat;
+    background-image: ;
+    grid-column: 1 / 7;
+    grid-row: 1 / 2;
+}
+
+#cell2 {
+    background: 50% 0 url(http://www.csszengarden.com/214/huntington.jpg) no-repeat;
+    grid-column: 7 / 10;
+    grid-row: auto;
+}
+
+#cell3 {
+    background-color: #fff;
+    grid-column: 1 / 7;
+    grid-row: 2 / 5;
+}
+
+#cell4 {
+    background-color: lightgreen;
+    grid-column: 7 / 10;
+    grid-row: 2 / 5;
+}
+
+#cell5 {
+    grid-column: 1 / 7;
+    grid-row: 5 / 7;
+}
+
+#cell6 {
+    grid-column: 7 / 10;
+    grid-row: 5 / 7;
+}
+
+#cell7 {
+    grid-column: 1 / 7;
+    grid-row: 7 / 9;
+}
+
+#cell8 {
+    grid-column: 7 / 10;
+    grid-row: 7 / 9;
+}
+
+#cell9 {
+    grid-column: 1 / 10;
+    grid-row: 9 / 11;
+}
+
+#cell10 {
+    grid-column: 1 / 10;
+    grid-row: auto;
+}
