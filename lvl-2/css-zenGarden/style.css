@@ -1,9 +1,10 @@
-@import url(http://fonts.googleapis.com/css?family=Julius+Sans+One|Libre+Baskerville:400,400italic);
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
 body {
   color: #325050;
   background:transparent #fff;
-  background-image: floating url(http://www.csszengarden.com/214/bamboo.png);
+  background-image: url(http://www.csszengarden.com/214/bamboo.png), url(http://www.csszengarden.com/214/gridlines.png), url(http://www.csszengarden.com/214/contours@2x.png), url(http://www.csszengarden.com/214/gridlines-opaque.png);
+  background-attachment: fixed;
   font-family: 'Libre Baskerville', sans-serif;
   font-size: 70%;
   margin: 0px;
@@ -20,64 +21,196 @@ a:hover {
 
 .container {
     display: grid;
-    grid-template-rows: repeat(11, 1fr);
+    grid-template-rows: repeat(10, 1fr);
     grid-template-columns: repeat(9, 1fr);
     height: auto;
     width: 100%;
     margin: 0px;
     padding: 0px;
 }
+
+h1, h2 {
+    padding: 0 10%;
+    margin: 0;
+    color: #fff;
+    font-weight: normal;
+}
+
+h1::before {
+  background: url(http://www.csszengarden.com/214/enso.svg);
+  display: inline-block;
+  position:relative;
+  content: "";
+  width: 80px;
+  height:80px;
+  background-size:100%;
+  top: 17px;
+  right: 10px;
+}
+
+h1 {
+  color: white;
+  font-size: 45px;
+  padding-bottom: 5px;
+}
+
+h2 {
+  display: inline-block;
+  color: white;
+  opacity: 60%;
+  font-family: 'Julius Sans One', sans-serif;
+  font-style: italic;
+  padding-left: 18.2%
+}
+
+h3 {
+  font-family: 'Julius Sans One', sans-serif;
+  font-weight: normal;
+  font-size: 30px;
+}
+
 #cell1 {
-    background:  50% 0 url(http://www.csszengarden.com/214/huntington.jpg) no-repeat;
-    background-image: ;
+
+    background-image: url(http://www.csszengarden.com/214/gridlines.png), url(http://www.csszengarden.com/214/contours@2x.png), url(http://www.csszengarden.com/214/gridlines-opaque.png), url(http://www.csszengarden.com/214/huntington.jpg);
+    font-family: 'Julius Sans One', sans-serif;
+    padding-bottom: 5%;
     grid-column: 1 / 7;
     grid-row: 1 / 2;
 }
 
 #cell2 {
-    background: 50% 0 url(http://www.csszengarden.com/214/huntington.jpg) no-repeat;
+    background-image: url(http://www.csszengarden.com/214/gridlines.png), url(http://www.csszengarden.com/214/contours@2x.png), url(http://www.csszengarden.com/214/gridlines-opaque.png), url(http://www.csszengarden.com/214/huntington.jpg);
+    font-family: 'Julius Sans One', sans-serif;
     grid-column: 7 / 10;
     grid-row: auto;
 }
 
+#viewAll {
+  display: grid;
+  position: relative;
+  background-color: #ffffff1a;
+  margin-top: 55px;
+  margin-left: 50px;
+  padding-top: 16px;
+  height: 40px;
+  width: 250px;
+  text-align:center;
+  font-size: 20px;
+  color:white;
+}
+
 #cell3 {
     background-color: #fff;
+    font-size: 18px;
+    padding: 60px;
+    font-weight: normal;
     grid-column: 1 / 7;
     grid-row: 2 / 5;
 }
 
+ul{
+    height: fit-content;
+    list-style-type: none;
+}
+
+li {
+     padding: 24px;
+}
+
+.authors {
+  font-style: italic;
+}
+
+.design {
+  color: #607476;
+  font-size: 22px;
+  font-family: 'Julius Sans One', sans-serif;
+  text-decoration: none;
+  padding-bottom: 0px;
+  font-style: normal;
+}
+
+.designer {
+  color: #607476;
+  font-size: 18px;
+  font-family: 'Libre Baskerville', sans-serif;
+  text-decoration: none;
+  padding-bottom: 0px; 
+  font-style: normal;
+}
+
 #cell4 {
-    background-color: lightgreen;
+    background-color: #edf4f0;
     grid-column: 7 / 10;
     grid-row: 2 / 5;
 }
 
 #cell5 {
+    background-color: rgba(138,188,159,0.5);
+    font-size: 18px;
+    padding: 60px;
+    font-weight: normal;
     grid-column: 1 / 7;
     grid-row: 5 / 7;
 }
 
 #cell6 {
+    background-color: rgba(160,160,159,0.5);
+    color: #607475;
+    text-decoration; none;
     grid-column: 7 / 10;
     grid-row: 5 / 7;
 }
 
+.links {
+  color: #607476;
+  font-size: 22px;
+  font-family: 'Julius Sans One', sans-serif;
+  text-decoration: none;
+  padding-bottom: 0px;
+  font-style: normal;
+}
+
+a {
+  color: #607476;
+}
+
 #cell7 {
+    background-color: #fff;
+    font-size: 18px;
+    padding: 60px;
+    font-weight: normal;
     grid-column: 1 / 7;
     grid-row: 7 / 9;
 }
 
 #cell8 {
+    background-color: #edf4f0;
     grid-column: 7 / 10;
     grid-row: 7 / 9;
 }
 
 #cell9 {
+    background-image: url(http://www.csszengarden.com/214/contours.png), url(http://www.csszengarden.com/214/gridlines.png), url(http://www.csszengarden.com/214/noise.png), url(http://www.csszengarden.com/214/koi.jpg);
+    background-repeat: repeat, repeat, repeat, no-repeat;
+    background-attachment: fixed, fixed, fixed, scroll;
+    background-size: auto, auto, auto, cover;
+    padding: 0;
     grid-column: 1 / 10;
-    grid-row: 9 / 11;
+    grid-row: 9 / 10;
+}
+
+#closing {
+  color: #ffffff66;
+  text-align: center;
+  font-size: 35px
+}
+.css-img{
+    width: 7%;
+    border-radius:13%;
 }
 
 #cell10 {
     grid-column: 1 / 10;
-    grid-row: auto;
+    grid-row: 10/11;
 }
