@@ -214,3 +214,65 @@ a {
     grid-column: 1 / 10;
     grid-row: 10/11;
 }
+
+@media (max-width: 900px){
+
+  .container {
+    display: grid;
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: repeat(9, 1fr);
+    height: 1000px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+#viewAll {
+  margin-left: 32%;
+  margin-bottom: 50px;
+}
+
+#cell1 {
+  background-repeat:repeat, repeat, repeat, no-repeat;
+  grid-row: 1 / 2;
+  grid-column: 1 / 10;
+}
+
+#cell2 {
+  grid-row: 2/3;
+  grid-column: 1/10;
+}
+
+#cell3 {
+  grid-row: 3/4;
+  grid-column: 1/10;
+}
+
+#cell5 {
+  grid-row: 4/5;
+  grid-column: 1/10;
+}
+
+#cell7 {
+  grid-row: 5/6;
+  grid-column: 1/10;
+}
+#cell9 {
+  grid-row: 6/7;
+  grid-column: 1/10;
+}
+#cell10{
+  grid-row: 7/8;
+  grid-column: 1/10;
+}
+
+#cell4 {
+  grid-row: 8/9;
+  grid-column: 1/10;
+}
+#cell6 {
+  grid-row: 9/10;
+  grid-column: 1/10;
+}
+
+}
