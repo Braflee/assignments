@@ -1,0 +1,66 @@
+{
+    "menu": [
+        {
+            "appetizers": [{
+                "friedPickles": [{
+                    "name": "Fried Pickles",
+                    "description": "A pickle that's fried.",
+                    "ingredients": "Pickles, flour, egg."
+                }],
+                "kalamari": [{
+                    "name": "Fried Kalamari",
+                    "description": "Squid fried in panko bread crumbs.",
+                    "ingredients": "Squid, panko."
+                }]
+            }],
+            "coldSands": [{
+                "italianStallion": [{
+                    "name": "Italian Stallion",
+                    "description": "Boi this gotta bunch a meat.",
+                    "ingredients": "Bread, meat, meat, meat."
+                }],
+                "coldTurkey": [{
+                    "name": "The Cold Turkey",
+                    "description": "It's a cold sandwich with turkey in it.",
+                    "ingredients": "Bread, frozen turkey."
+                }]
+            }],
+            "hotSands": [{
+                "fireSub": [{
+                    "name": "The Fire Sub",
+                    "description": "We set a sandwich on fire.",
+                    "ingredients": "Sandwich, matches, gasoline"
+                }],
+                "pureDeath": [{
+                    "name": "Pure Death",
+                    "description": "So spicy, you'll probably die.",
+                    "ingredients": "Anthrax."
+                }]
+            }],
+            "desserts": [{
+                "tiraMi": [{
+                    "name": "Tira Mi Suess.",
+                    "description": "A chocolate flavored children's book.",
+                    "ingredients": "Paper, Chocolate."
+                }],
+                "flavoredAir": [{
+                    "name": "Flavored Air",
+                    "description": "Pick a flavor! The rest is self-explanatory.",
+                    "ingredients": "Air, Flavor."
+                }]
+            }],
+            "drinks": [{
+                "bigSad": [{
+                    "name": "The Big Sad",
+                    "description": "We know why you're ordering this.",
+                    "ingredients": "Whiskey, Tears."
+                }],
+                "Coke": [{
+                    "name": "Coke",
+                    "description": "Coke",
+                    "ingredients": "Coke"
+                }]
+            }]
+        }
+    ]
+}
