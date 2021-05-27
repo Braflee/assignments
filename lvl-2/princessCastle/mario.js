@@ -1,18 +1,16 @@
 const readlineSync = require('readline-sync');
 let gameActive = true
+//const gameTimer = game()
+game()
 
-if(gameActive === true){
-    game()
-} else if(gameActive === false){
-    console.log('dead')
-}
 function game(){
     class Player {
-        constructor(name, totalCoins, status, hasStar=false){
+        constructor(name, totalCoins, status, hasStar=false, playerIsAlive = true){
             this.name = name,  
             this.totalCoins = totalCoins,
             this.status = status,
-            this.hasStar = hasStar
+            this.hasStar = hasStar,
+            this.playerIsAlive = playerIsAlive
         }
         setName(namePicked){
             setName = readlineSync.keyIn('Who do you think deserves to find Peach? [m]Mario, or [l]Luigi?', {limit: 'ml'})
@@ -30,9 +28,14 @@ function game(){
                 console.log('Your star protected you!')
             }else if(this.status === 'Big'){
                 this.status = 'Smol'
+                this.hasStar = false
             }else if(this.status === 'Smol'){
-                this.status === 'DED'
-                gameActive === false
+                this.status = 'DED'
+                this.playerIsAlive = false
+                this.hasStar = false
+                clearInterval(gameTimer)
+                console.log('You DIIIIEEEEED')
+
             }
         }  
         gotPowerUp(){
@@ -53,6 +56,8 @@ function game(){
             console.log(`Brother: ${this.name}`)
             console.log(`Bank: ${this.totalCoins} coins`)
             console.log(`Power Status: ${this.status}!`)
+            console.log(`
+            `)
             if(this.hasStar === true){
                 console.log(`You have the star!`)
             } else {
@@ -61,10 +66,9 @@ function game(){
         }
     }
     const marioBro = new Player('Mario', 0, 'Smol')
-    setInterval(() => {
+    const gameTimer = setInterval(() => {
         const randomNum = Math.floor(Math.random() * 3)
         marioBro.print()
-        console.log(randomNum)
         if (randomNum === 0) {
             marioBro.gotHit()
         } else if (randomNum === 1) {
@@ -73,6 +77,10 @@ function game(){
             marioBro.gotCoin()
         } 
     }, 1000)
+    // if(marioBro.playerIsAlive === false){
+    //     console.log('hello')
+    //     clearInterval(gameTimer)
+    // }
 }
 
 
