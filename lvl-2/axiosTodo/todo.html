@@ -8,14 +8,20 @@
     <title>Axios Todo List</title>
 </head>
 <body>
+
     <form name="todoForm">
-        <input type="text" name="todoInput"/>
-        <button name="submit">Submit</button>
+        <div><input type="text" name="title" placeholder="Title"/></div>
+        <div><input type="text" name="description" placeholder="Description"/></div>
+        <div><input type="text" name="price" placeholder="Price"/></div>
+        <div><input type="text" name="imgUrl" placeholder="Image Url"/></div>
+        <button>Submit</button>
     </form>
-    <div id="todoBody">
+
+    <div id="todoList">
 
     </div>
 
-    <source src="todo.js"></source>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js"></script>
+    <script src="todo.js"></script>
 </body>
 </html>
