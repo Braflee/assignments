@@ -7,33 +7,33 @@ function getData(){
 function listData(data){
     clearList()
     for(let i = 0; i < data.length; i++){
+        let div = document.createElement('div')
+        document.getElementById('todoList').appendChild(div)
+        div.classList.add('listItem')
+
         const chBox = document.createElement('input')
         chBox.setAttribute('type', 'checkbox')
-        document.getElementById('todoList').appendChild(chBox)
-        
+        div.appendChild(chBox)
+
         const titl = document.createElement('h1')
         titl.textContent = data[i].title
-        document.getElementById('todoList').appendChild(titl)
-
+        div.appendChild(titl)
+        
         const desc = document.createElement('h3')
         desc.textContent = data[i].description
-        document.getElementById('todoList').appendChild(desc)
-
+        div.appendChild(desc)
+        
         const pri = document.createElement('h3')
         pri.textContent = data[i].price
-        document.getElementById('todoList').appendChild(pri)
-
+        div.appendChild(pri)
+        
         const imgU = document.createElement("img")
         imgU.src = data[i].imgUrl
-        document.getElementById('todoList').appendChild(imgU)
+        div.appendChild(imgU)
         
         const button = document.createElement('button')
         button.textContent = 'Delete'
-        document.getElementById('todoList').appendChild(button)
-        
-
-        const div = document.createElement('div')
-        document.getElementById('todoList').appendChild(div)
+        div.appendChild(button)
         
         chBox.addEventListener('change', (e) => {
             e.preventDefault()
@@ -54,16 +54,15 @@ function listData(data){
             }
         })
         button.addEventListener('click', (e) =>{
-            getData()
             axios.delete(`https://api.vschool.io/bradduffy/todo/${data[i]._id}`)
-                .then(res => console.log(res))
+                .then(res => {
+                    getData()
+                    console.log(res)
+                })
                 .catch(err => console.log(err))
         })
-
-    }
+    } 
 }
-
-
 
 function clearList(){
     const el = document.getElementById('todoList')
