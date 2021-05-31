@@ -9,16 +9,16 @@
 </head>
 <body>
 
-    <form name="todoForm">
-        <div><input type="text" name="title" placeholder="Title"/></div>
-        <div><input type="text" name="description" placeholder="Description"/></div>
-        <div><input type="text" name="price" placeholder="Price"/></div>
-        <div><input type="text" name="imgUrl" placeholder="Image Url"/></div>
-        <button>Submit</button>
+    <form name="todoForm" id="todoForm">
+        <div><input type="text" name="title" class="input" placeholder="Title"/></div>
+        <div><input type="text" name="description" class="input" placeholder="Description"/></div>
+        <div><input type="text" name="price" class="input" placeholder="Price"/></div>
+        <div><input type="text" name="imgUrl" class="input" placeholder="Image Url"/></div>
+        <button id="submitBtn">Submit</button>
     </form>
 
     <div id="todoList">
-
+        
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js"></script>

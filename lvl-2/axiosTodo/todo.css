@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap');
+
+body{
+    background-image: url('https://images.unsplash.com/photo-1449247709967-d4461a6a6103?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.input{
+    font-family: 'Roboto Mono', monospace;
+    height: 50px;
+    width: 50%;
+}
+
+#submitBtn{
+    font-family: 'Roboto Mono', monospace;
+    height: 30px;
+    width: 25%;
+
+}
+
+#todoList{
+    font-family: 'Roboto Mono', monospace;
+}
+
+img{
+    height: 100px;
+    width: 100px;
+}
