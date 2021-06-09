@@ -1,12 +1,12 @@
 import React from 'react'
-import Friends from './components/Friend'
+import Friend from './Friend'
 import friendData from './friendList'
 
 function App(){
-    const data = friendData.map(friend => <Friends key={friend.name}/> )
+    const data = friendData.map(friend => <Friend key={friend.id} friend={friend} pets={friend.pets}/> )
     return (
         <div>
-
+            {data}
         </div>
     )
 }
