@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@700&display=swap');
+
+body {
+    background-image: url(https://images.unsplash.com/photo-1554123168-b400f9c806ca?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);
+}
+
+.cardContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.vacationCard{
+    font-family: 'Baloo Tammudu 2';
+    text-align: center;
+    background-color: blanchedalmond;
+    opacity: 75%;
+    align-items: center;
+    flex-basis: 15%;
+    border: 2px solid black;
+    border-radius: 10%;
+    transition: opacity 1s, border-radius 1s;
+}
+
+.vacationCard:hover{
+    opacity: 55%;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}

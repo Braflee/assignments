@@ -53,6 +53,13 @@ function listData(data){
                     .catch(err => console.log(err))
             }
         })
+        if (data[i].completed === true) {
+            titl.style.textDecoration = 'line-through'
+            desc.style.textDecoration = 'line-through'
+            pri.style.textDecoration = 'line-through'
+            chBox.checked = true
+        }
+
         button.addEventListener('click', (e) =>{
             axios.delete(`https://api.vschool.io/bradduffy/todo/${data[i]._id}`)
                 .then(res => {
