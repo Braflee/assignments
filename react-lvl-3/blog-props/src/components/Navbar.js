@@ -4,13 +4,13 @@ function Navbar(){
     return (
         <div className='navCont'>
             <div className='brand'>
-                <p>Start Bootstrap</p>
+                <a>Start Bootstrap</a>
             </div>
             <div className='fLinks'>
-                <p>Home</p>
-                <p>About</p>
-                <p>Sample Post</p>
-                <p>Contact</p>
+                <a className='home'>Home</a>
+                <a className='about'>About</a>
+                <a className='sPost'>Sample Post</a>
+                <a className='contact'>Contact</a>
             </div>
         </div>
     )
