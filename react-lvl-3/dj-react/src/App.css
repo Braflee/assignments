@@ -1,0 +1,12 @@
+.squareCont{
+    width:400px;
+    height:400px;
+    display:grid;
+    grid-template-columns: 200px 200px;
+    grid-row: auto auto;
+    grid-column-gap: 1px;
+    grid-row-gap: 1px;
+    border: 2px solid black;
+}
+
+
