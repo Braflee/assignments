@@ -1,4 +1,13 @@
+.djTable{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
 .squareCont{
+    margin: 5px;
     width:400px;
     height:400px;
     display:grid;
@@ -6,7 +15,27 @@
     grid-row: auto auto;
     grid-column-gap: 1px;
     grid-row-gap: 1px;
-    border: 2px solid black;
+}
+
+.square{
+    margin: 2px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.btnCont{
+    margin: 5px;
+    display: grid;
+    height: 400px;
+    width: 200px;
+    grid-template-columns: 200px 200px 200px ;
+    grid-template-rows: auto auto auto;
+}
+
+button{
+    margin: 2px;
+    border: none;
+    border-radius: 10px;
 }
 
 
