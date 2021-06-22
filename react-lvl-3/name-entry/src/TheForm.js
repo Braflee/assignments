@@ -4,7 +4,8 @@ class TheForm extends Component {
     constructor() {
         super()
         this.state = {
-            favFood: ''
+            currentFood: '',
+            foods: []
         }
     }
 
@@ -17,23 +18,31 @@ class TheForm extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
-        
+        this.setState(prevState => ({
+            foods: [...prevState.foods, prevState.currentFood]
+        }))
     }
 
     render() {
+        const allFoods = this.state.foods.map(food => {
+           return (<li>
+                {food}
+            </li>)
+        })
+
         return(
             <form onSubmit={this.handleSubmit}>
                 <input
                     type='text'
                     placeholder="What's your favorite food?"
-                    value={this.state.favFood}
-                    name='favFood'
+                    value={this.state.currentFood}
+                    name='currentFood'
                     onChange={this.handleChange}
                 />
                 <button>Submit to List</button>
-                <h1>{this.state.favFood}</h1>
+                <h1>{this.state.currentFood}</h1>
                 <ol>
-                    <li>{this.state.favFood}</li>
+                    {allFoods}
                 </ol>
             </form>
         )
