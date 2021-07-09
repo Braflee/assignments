@@ -24,7 +24,6 @@ class HitList extends Component {
             </div>
         )
     }
-
 }
 
 export default HitList

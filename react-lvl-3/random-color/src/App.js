@@ -1,5 +1,5 @@
 import React from 'react'
-import ColorGen from './ColorGen'
+import ColorGen from './components/ColorGen'
 
 function App() {
     return(

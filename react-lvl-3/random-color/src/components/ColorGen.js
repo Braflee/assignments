@@ -14,7 +14,6 @@ class ColorGen extends Component {
                     color: data.colors
                 })
             })
-        console.log(this.state.color);
     }
 
     render(){

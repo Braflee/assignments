@@ -19,3 +19,12 @@ form {
 input {
     width: 175px;
 }
+
+button {
+    background-color: black;
+    color: blanchedalmond;
+    height: 50px;
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+}

@@ -22,6 +22,7 @@ class BadgeForm extends Component {
 
     handleSubmit = e => {
         e.preventDefault()
+        console.log('test');
         this.setState(prevState => ({
             fName: '',
             lName: '',
@@ -102,7 +103,9 @@ class BadgeForm extends Component {
                             onChange={this.handleChange}
                             minLength='3'
                         />
-                        <button>Submit</button>
+                        <div>
+                            <button>Submit</button>
+                        </div>
                     </form>
                 </div>
                 <div className='badge'>
