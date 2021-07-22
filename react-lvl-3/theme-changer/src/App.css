@@ -1,0 +1,13 @@
+body {
+    background-color: plum;
+}
+
+.dark-theme {
+    background-color: black;
+    color: cornsilk;
+}
+
+.light-theme {
+    background-color: cornsilk;
+    color: orange;
+}
