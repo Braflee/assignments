@@ -9,10 +9,11 @@ function UglyList(props) {
                 <div>
                     {context.uglyArr.map(thing => {
                         return(
-                        <div key='index'>
-                            <img src={`${thing.imgUrl}`}/>
+                        <div key={thing._id}>
+                            <img alt='Ugly Thing' src={`${thing.imgUrl}`}/>
                             <h1>{thing.title}</h1> 
                             <h1>{thing.description}</h1> 
+                            <button onClick={() => context.handleDelete(thing._id)}>Delete</button>
                         </div>
                     )})}
                 </div>

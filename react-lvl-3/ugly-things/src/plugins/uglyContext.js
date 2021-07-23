@@ -7,16 +7,19 @@ class UglyProvider extends Component {
         uglyArr: [],
         title: '',
         description: '',
-        imgUrl: ''
+        imgUrl: '',
+        isEdit: false
     }
 
+    // getUglyData = () => {
+    // }
+    
     componentDidMount() {
         axios.get(`https://api.vschool.io/duffy/thing`)
             .then(res => res)
             .then(res => {
                 this.setState({uglyArr: [...res.data]})
             })
-            console.log(this.uglyArr);
     }
 
     handleChange = (e) => {
@@ -24,19 +27,56 @@ class UglyProvider extends Component {
         this.setState({[name]: value})
     }
 
-    handleSubmit = () => {
+    handleSubmit = (e) => {
+        e.preventDefault()
         const newUggo = {
             title: this.state.title,
             description: this.state.description,
             imgUrl: this.state.imgUrl
         }
 
-        axios.post(`https://api.vschool.io/duffy/thing`, {newUggo})
-            .then(res => console.log(res.data))
-            .catch(res => console.log(res.data))
+        axios.post(`https://api.vschool.io/duffy/thing`, newUggo)
+            .then(res => {
+                console.log(res)
+                console.log(res.data)
+                this.setState(prevState => ({
+                    ...prevState,
+                    uglyArr: [...prevState.uglyArr, res.data]
+                }))
+            })
+        
+        this.setState({
+            title: '',
+            description: '',
+            imgUrl: ''
+        })
 
     }
      
+    handleDelete = (id) => {
+        axios.delete(`https://api.vschool.io/duffy/thing/${id}`)
+            .then(res => {
+                console.log(res)
+                console.log(res.data)
+                const rmUggo = this.state.uglyArr.filter(item => item._id !== id)
+                this.setState({uglyArr: rmUggo})
+            })
+    }
+
+    handelEdit = (id, edits) => {
+        const uggoEdit = this.state.uglyArr.map(item => 
+                item._id === id ? {...item, edits} : item
+            )
+
+        axios.put(`https://api.vschool.io/duffy/thing/${id}`)
+            .then(res => {
+                this.setState(prevState => ({
+                    ...prevState,
+                    uglyArr: uggoEdit
+                }))
+            })
+    }
+
     render() {
         return (
             <Provider value={{
@@ -44,9 +84,10 @@ class UglyProvider extends Component {
                 title: this.state.title,
                 description: this.state.description,
                 imgUrl: this.state.imgUrl,
-                id: this.state.id,
+                id: this.state._id,
                 handleChange: this.handleChange,
-                handleSubmit: this.handleSubmit
+                handleSubmit: this.handleSubmit,
+                handleDelete: this.handleDelete
             }}>
                 {this.props.children}
             </Provider>
