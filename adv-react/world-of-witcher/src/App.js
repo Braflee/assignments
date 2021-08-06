@@ -12,22 +12,26 @@ function App(props) {
         <LoreConsumer>
             {context => (  
                 <div>
-                    <Link className='home-btn' to='/'>
-                        <button>Home</button>
-                    </Link>
-                    <Link to='/characters'>
-                        <button className='char-btn' onClick={() => context.getLore(`characters`)}>Characters</button>
-                    </Link>
-                    <Link to='/monsters'>
-                        <button className='monst-btn' onClick={() => context.getLore(`creatures`)}>Monsters</button>
-                    </Link>
-                    <Link to='/quests'>
-                        <button className='quest-btn' onClick={() => context.getLore(`quests`)}>Quests</button>
-                    </Link>
+                    <div className='btn-cont'>
+                        <Link to='/'>
+                            <div className='home-back'><button className='home-btn'>Home</button></div>
+                        </Link>
+                        <Link to='/characters'>
+                            <div className='char-back'><button className='char-btn' onClick={() => context.getLore(`characters`)}>Characters</button></div>
+                        </Link>
+                        <Link to='/monsters'>
+                            <div className='monst-back'><button className='monst-btn' onClick={() => context.getLore(`creatures`)}>Monsters</button></div>
+                        </Link>
+                        <Link to='/quests'>
+                            <div className='quest-back'><button className='quest-btn' onClick={() => context.getLore(`quests`)}>Quests</button></div>
+                        </Link>
+                    </div>
 
                     <Switch>
                         <Route exact path='/'>
-                            <Home />
+                            <div className='home-cont'>
+                                <Home />
+                            </div>
                         </Route>
 
                         <Route path='/characters'>

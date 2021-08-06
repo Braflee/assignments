@@ -13,8 +13,12 @@ function Characters() {
                                         <div className='flip-card-front' style={{backgroundImage: `url(${card.image})`}}>
                                         </div>
                                         <div className='flip-card-back'>
-                                            <h1>Name: {card.name}</h1>
-                                            <h3>Gender: {card.gender}</h3>
+                                            <h4>Name: {card.name}</h4>
+                                            <p>Gender: {card.gender}</p>
+                                            <p>Race: {card.race}</p>
+                                            <p>Profession: {card.profession}</p>
+                                            <p>Nationality: {card.nationality}</p>
+                                            <p>First quest appearance: {card.fappearance}</p>
                                         </div>
                                     </div>
                                 </div>

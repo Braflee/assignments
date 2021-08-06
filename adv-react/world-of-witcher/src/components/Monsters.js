@@ -15,8 +15,11 @@ function Monsters() {
                                             <img src={card.image} alt='charImg' />
                                         </div>
                                         <div className='flip-card-back'>
-                                            <h1>Name: {card.name}</h1>
-                                            <h3>Class: {card.class}</h3>
+                                            <h4>Name: {card.name}</h4>
+                                            <p>Class: {card.class}</p>
+                                            <p>Weaknesses: {card.susceptibility}</p>
+                                            <p>Immunities: {card.immunity}</p>
+                                            <p>Occurences: {card.occurences}</p>
                                         </div>
                                     </div>
                                 </div>

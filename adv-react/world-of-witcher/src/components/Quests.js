@@ -24,9 +24,10 @@ function Quests() {
                                             } alt='charImg' />
                                         </div>
                                         <div className='flip-card-back'>
-                                            <h1>Name: {card.name}</h1>
-                                            <h3>Type: {card.type}</h3>
-                                            <h3>Region: {card.region}</h3>
+                                            <h4>Name: {card.name}</h4>
+                                            <p>Type: {card.type}</p>
+                                            <p>Region: {card.region}</p>
+                                            <p>Suggested Level: {card.level}</p>
                                         </div>
                                     </div>
                                 </div>
