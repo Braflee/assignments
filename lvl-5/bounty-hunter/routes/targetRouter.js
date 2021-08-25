@@ -78,7 +78,7 @@ targetRouter.route('/')
         const newTarget = req.body
         newTarget._id = uuid()
         targets.push(newTarget)
-        res.send(`${newTarget.fName} ${newTarget.lName} has been added to your database with a bounty of ${newTarget.bounty}. Happy hunting.`)
+        res.send(newTarget)
     })
 
 module.exports = targetRouter
