@@ -2,11 +2,11 @@ import React, {useState} from 'react'
 
 function TargetForm(props) {
     const initInput = {
-        fName: '',
-        lName: '',
+        fName: props.fName || '',
+        lName: props.lName || '',
         eliminated: false,
-        bounty: '',
-        type: ''
+        bounty: props.bounty || '',
+        type: props.type || ''
     }
 
     const [input, setInput] = useState(initInput)
@@ -18,7 +18,7 @@ function TargetForm(props) {
 
     function handleSubmit(e) {
       e.preventDefault()
-      props.addTarget(input)
+      props.submit(input, props._id)
       setInput(initInput)
     }
 
@@ -48,7 +48,7 @@ function TargetForm(props) {
             value={input.type} 
             onChange={handleChange} 
             placeholder='Sith or Jedi?' />  
-        <button>Add Target</button>
+        <button>{props.btnText}</button>
         </form>
     )
 }
