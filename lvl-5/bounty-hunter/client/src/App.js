@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import Target from './components/Target'
 import TargetForm from './components/TargetForm'
 import axios from 'axios'
@@ -22,10 +22,10 @@ function App(props) {
 
     function deleteTarget(targetID) {
         axios.delete(`/targets/${targetID}`)
-        .then(res => {
-            setTargets(prevTarget => prevTarget.filter(target => target._id !== targetID))
-        })
-        .catch(err => console.log(err))
+            .then(res => {
+                setTargets(prevTarget => prevTarget.filter(target => target._id !== targetID))
+            })
+            .catch(err => console.log(err))
     }
 
     function editTarget(updates, targetID) {
@@ -40,18 +40,18 @@ function App(props) {
         getTargets()
     }, [])
 
-    return(
+    return (
         <div>
             <div className='target-cont'>
-                <TargetForm 
+                <TargetForm
                     submit={addTarget}
                     btnText='Add Movie' />
-                {targets.map(target => 
-                    <Target 
-                        {...target} 
+                {targets.map(target =>
+                    <Target
+                        {...target}
                         key={target._id}
                         deleteTarget={deleteTarget}
-                        editTarget={editTarget}/>)}
+                        editTarget={editTarget} />)}
             </div>
         </div>
     )
