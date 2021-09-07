@@ -15,8 +15,8 @@ mongoose.connect('mongodb://localhost:27017/practice-db',
     },
 () => console.log('Connected to database'))
 
-app.use('/books', require('./routes/bookRouter'))
-app.use('./authors', require('./routes/authorRouter'))
+app.use('/books', require('./routes/bookRouter.js'))
+app.use('/authors', require('./routes/authorRouter.js'))
 
 app.use((err, req, res, next) => {
     console.log(err)
