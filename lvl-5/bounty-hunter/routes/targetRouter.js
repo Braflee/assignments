@@ -1,5 +1,4 @@
 const express = require('express')
-const targetModel = require('../models/target-model.js')
 const targetRouter = express.Router()
 const TargetModel = require('../models/target-model.js')
 //Get All
@@ -23,17 +22,16 @@ targetRouter.get('/', (req, res, next) => {
 //     }
 //     res.status(200).send(foundTarget)
 // })
-//Get by type
-// targetRouter.get('/type', (req, res, next) => {
-//     const type = req.query.type
-//     const filteredTarget = targets.filter(target => target.type === type)
-//     if(!type) {
-//         const error = new Error(`You must choose a type!`)
-//         res.status(500)
-//         return next(error)
-//     }
-//     res.status(200).send(filteredTarget)
-// })
+// Get by type
+targetRouter.get('/type', (req, res, next) => {
+    TargetModel.find({type: req.query.type}, (err, targets) => {
+        if(err) {
+            res.status(500)
+            return next(err)
+        }
+        return res.status(200).send(targets)
+    })
+})
 //Delete request
 targetRouter.delete('/:targetID', (req, res, next) => {
     TargetModel.findOneAndDelete({_id: req.params.targetID}, (err, deletedItem) => {
@@ -46,7 +44,7 @@ targetRouter.delete('/:targetID', (req, res, next) => {
 })
 //PUT request (update one)
 targetRouter.put('/:targetID', (req, res, next) => {
-    targetModel.findOneAndUpdate(
+    TargetModel.findOneAndUpdate(
         {_id: req.params.targetID},
         req.body,
         {new: true},

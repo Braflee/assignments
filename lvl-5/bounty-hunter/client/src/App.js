@@ -36,6 +36,16 @@ function App(props) {
             .catch(err => console.log(err))
     }
 
+    function handleFilter(e) {
+        if(e.target.value === 'all'){
+            getTargets()
+        }else{
+            axios.get(`/targets/type?type=${e.target.value}`)
+                .then(res => setTargets(res.data))
+                .catch(err => console.log(err))
+            }
+    }
+
     useEffect(() => {
         getTargets()
     }, [])
@@ -46,6 +56,12 @@ function App(props) {
                 <TargetForm
                     submit={addTarget}
                     btnText='Add Movie' />
+                <h4>Filter by Type</h4>
+                <select onChange={handleFilter} className='filter-form'>
+                    <option value='all'>All Targets</option>
+                    <option value="Jedi">Jedi</option>
+                    <option value="Sith">Sith</option>
+                </select>
                 {targets.map(target =>
                     <Target
                         {...target}
