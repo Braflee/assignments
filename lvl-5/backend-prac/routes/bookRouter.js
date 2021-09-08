@@ -48,5 +48,15 @@ bookRouter.put('/like/:bookID', (req, res, next) => {
         }
     )
 })
+//Find books by like range
+bookRouter.get('/search/bylikes', (req, res, next) => {
+    Book.where('likes').gte(5).exec((err, books) => {
+        if(err) {
+            res.status(500)
+            return next(err)
+        }
+        return res.status(200).send(books)
+    })
+})
 
 module.exports = bookRouter
